@@ -114,7 +114,7 @@ Firstly, set `Subject` as a factor variable.
 dataset_extract$Subject <- as.factor(dataset_extract$Subject)
 dataset_extract <- data.table(dataset_extract)
 ```
-Next, create variable `dataset_tidy` which collates the average of each variable for each activity and each subject.
+Next, create variable `dataset_tidy` which collates the average of each variable for each activity and each subject of `dataset_extract`.
 ```
 dataset_tidy <- aggregate(. ~Subject + Activity, dataset_extract, mean)
 ```
