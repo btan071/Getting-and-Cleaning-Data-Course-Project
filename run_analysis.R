@@ -49,6 +49,6 @@ dataset_extract$Subject <- as.factor(dataset_extract$Subject)
 dataset_extract <- data.table(dataset_extract)
 
 dataset_tidy <- aggregate(. ~Subject + Activity, dataset_extract, mean)
-dataset_tidy <- dataset_tidy[order(dataset_tidy$Subject,dataset_tidy$Activity),]
+dataset_tidy <- dataset_tidy[order(dataset_tidy$Subject, dataset_tidy$Activity),]
 write.table(dataset_tidy, file = "tidy_dataset.txt", row.names = FALSE)
 
